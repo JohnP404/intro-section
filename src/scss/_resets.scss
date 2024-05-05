@@ -1,0 +1,28 @@
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+
+img {
+   max-width: 100%;
+}
+
+body {
+   font-size: 18px;
+   font-family: 'Epilogue', sans-serif;
+   width: 100vw;
+   position: relative;
+}
+
+a {
+   color: inherit;
+   text-decoration: none;
+   display: inline-block;
+}
+
+button {
+   outline: none;
+   border: none;
+   display: inline-block;
+}

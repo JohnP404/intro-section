@@ -1,0 +1,52 @@
+@use 'variables' as *;
+
+@each $key,
+$val in $colors {
+
+   .text-#{$key} {
+      color: $val;
+   }
+
+   .bg-#{$key} {
+      background-color: $val;
+   }
+
+   body.dark-theme {
+      .text-#{$key} {
+         color: lighten($val, 25%);
+      }
+
+      .bg-#{$key} {
+         background-color: darken($val, 80);
+      }
+
+      .hero--title {
+         color: lighten(map-get($colors, 'black'), 70%);
+      }
+
+      .theme-toggler,
+      .close-menu-icon,
+      .nav img {
+         filter: invert(70%);
+      }
+
+      .mobile__menu__login {
+
+         a:nth-child(2):hover {
+            color: lighten(map-get($colors, "black"), 70);
+            border: 2px solid lighten(map-get($colors, "black"), 70);
+         }
+
+      }
+
+      .nav * a:hover {
+         color: lighten(map-get($colors, "black"), 70);
+      }
+
+      .desktop--login {
+         & a:nth-child(2):hover {
+            border: 2px solid lighten(map-get($colors, "black"), 70);
+         }
+      }
+   }
+}
